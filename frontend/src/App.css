@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;    
+}
+
+body{
+    font-family: "Verdana", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background: rgb(91,91,91);
+    background: radial-gradient(circle, rgba(91,91,91,1) 0%, rgba(97,59,59,1) 0%, rgba(96,61,61,1) 23%, rgba(98,52,52,1) 90%);
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    white-space: pre-wrap;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: space-around;
+    max-width: 400px;
+    width: 100%;
+    gap: 85px;
+    background: rgb(80, 52, 52);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.form-file-input-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    border: 4px dotted rgb(177, 92, 92);
+    border-radius: 30px;
+    padding: 15px 10px;
+    background:rgb(134, 70, 70);
+    color: white;
+    font-size: 1rem;
+}
+
+.file-input-hidden{
+    opacity: 0;
+    position: absolute;
+    max-width: 250px;
+    max-height: 150px;
+    height: 100%;
+    z-index: 1;
+}
+
+.file-input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.file-input-cancel-button{
+    margin-top: 2rem;
+    font-size: 1rem;
+    width: 45%;
+    background: rgb(53, 46, 46);
+    padding: 10px;
+    color:white;
+    transition: all 0.35s ease ;
+}
+
+.file-input-text{
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-text-input {
+    background: rgb(134, 70, 70);
+    border: 4px solid rgb(177, 92, 92);
+    border-radius: 5px;
+    width: 100%;
+    height: 2.8rem;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    outline: none;
+    color: white;
+}
+
+.email-text-input-label{
+    max-width: 300px;
+    width: 100%;
+    color:white;
+}
+
+::placeholder{
+    color:rgb(180, 161, 161);
+}
+
+.form-submit{
+    width: 35%;
+    height: 2.6rem;
+    font-size: 1.3rem;
+    background: rgb(41, 36, 36);
+    color: white;
+    transition: all 0.35s ease ;
+}
+
+.file-input-cancel-button:hover{
+    background: darkred;
+}
+
+.form-submit:hover{
+    background: green;
+}
+
+@media (max-width: 300px) {
+    .file-input-hidden{
+        width: auto;
+    }
+    .form-submit{
+        width: auto;
+    }
+    .file-input-text{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .form-file-input-container{
+        width: 100%;
+    }
+    .file-input-cancel-button{
+        width: auto;
+    }
+}
